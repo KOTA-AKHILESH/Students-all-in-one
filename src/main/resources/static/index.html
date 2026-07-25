@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholar's Court — Student Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-header">
+      <svg class="crest" viewBox="0 0 60 60" fill="none">
+        <path d="M30 4 L36 20 L52 12 L45 28 L58 30 L45 32 L52 48 L36 40 L30 56 L24 40 L8 48 L15 32 L2 30 L15 28 L8 12 L24 20 Z" stroke="#e6c34a" stroke-width="1.4" fill="rgba(230,195,74,0.12)"/>
+      </svg>
+      <h1>Enrollment into the Court</h1>
+      <p>Tell us about yourself to unlock your dashboard</p>
+    </div>
+    <form id="reg-form" novalidate>
+      <div class="field-grid">
+        <div class="field full">
+          <label for="f-name">Full Name</label>
+          <input type="text" id="f-name" required placeholder="e.g. Kota Akhilesh">
+        </div>
+        <div class="field full">
+          <label for="f-college">College / Institution</label>
+          <input type="text" id="f-college" required placeholder="e.g. VNR Vignana Jyothi Institute">
+        </div>
+        <div class="field">
+          <label for="f-age">Age</label>
+          <input type="number" id="f-age" min="14" max="60" required placeholder="20">
+        </div>
+        <div class="field">
+          <label for="f-gender">Gender</label>
+          <select id="f-gender" required>
+            <option value="" disabled selected>Select</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-dept">Department</label>
+          <select id="f-dept" required>
+            <option value="" disabled selected>Select</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Electronics & Communication</option>
+            <option>Electrical Engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-cgpa">CGPA (out of 10)</label>
+          <input type="number" id="f-cgpa" min="0" max="10" step="0.01" required placeholder="8.5">
+        </div>
+        <div class="field">
+          <label for="f-income">Parents' Annual Income (₹)</label>
+          <input type="number" id="f-income" min="0" required placeholder="150000">
+        </div>
+        <div class="field">
+          <label for="f-category">Category</label>
+          <select id="f-category" required>
+            <option value="" disabled selected>Select</option>
+            <option>General</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>EWS</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Enter the Court →</button>
+      <p class="error-msg" id="error-msg">Please fill in every field before proceeding.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app-screen">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h2>Scholar's Court</h2>
+        <span>Student Success Platform</span>
+      </div>
+      <ul class="navlist" id="navlist">
+        <li><button data-section="dashboard" class="active"><span class="icon">🏠</span>Dashboard</button></li>
+        <li><button data-section="scholarships"><span class="icon">🎓</span>Scholarships</button></li>
+        <li><button data-section="learning"><span class="icon">📚</span>Learning</button></li>
+        <li><button data-section="pdf"><span class="icon">📄</span>PDF Summary</button></li>
+        <li><button data-section="videos"><span class="icon">📺</span>Video Suggestions</button></li>
+        <li><button data-section="coding"><span class="icon">💻</span>Coding Profiles</button></li>
+        <li><button data-section="skills"><span class="icon">🏆</span>Skills</button></li>
+        <li><button data-section="certificates"><span class="icon">📂</span>Certificates</button></li>
+        <li><button data-section="internships"><span class="icon">💼</span>Internships</button></li>
+        <li><button data-section="analytics"><span class="icon">📈</span>Analytics</button></li>
+        <li><button data-section="settings"><span class="icon">⚙</span>Settings</button></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="logout-btn"><span class="icon">🚪</span>Logout</button>
