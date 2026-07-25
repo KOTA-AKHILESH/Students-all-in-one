@@ -18,7 +18,7 @@
         <path d="M30 4 L36 20 L52 12 L45 28 L58 30 L45 32 L52 48 L36 40 L30 56 L24 40 L8 48 L15 32 L2 30 L15 28 L8 12 L24 20 Z" stroke="#e6c34a" stroke-width="1.4" fill="rgba(230,195,74,0.12)"/>
       </svg>
       <h1>Enrollment into the Court</h1>
-      <p>Tell us about yourself to unlock your dashboard</p>
+      <p>Tell us about yourself to unlock your personalized dashboard</p>
     </div>
     <form id="reg-form" novalidate>
       <div class="field-grid">
@@ -26,27 +26,17 @@
           <label for="f-name">Full Name</label>
           <input type="text" id="f-name" required placeholder="e.g. Kota Akhilesh">
         </div>
-        <div class="field full">
-          <label for="f-college">College / Institution</label>
-          <input type="text" id="f-college" required placeholder="e.g. VNR Vignana Jyothi Institute">
+        <div class="field">
+          <label for="f-college">College</label>
+          <input type="text" id="f-college" required placeholder="e.g. VNR VJIET">
         </div>
         <div class="field">
-          <label for="f-age">Age</label>
-          <input type="number" id="f-age" min="14" max="60" required placeholder="20">
+          <label for="f-university">University</label>
+          <input type="text" id="f-university" required placeholder="e.g. JNTU Hyderabad">
         </div>
         <div class="field">
-          <label for="f-gender">Gender</label>
-          <select id="f-gender" required>
-            <option value="" disabled selected>Select</option>
-            <option>Female</option>
-            <option>Male</option>
-            <option>Other</option>
-            <option>Prefer not to say</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-dept">Department</label>
-          <select id="f-dept" required>
+          <label for="f-branch">Branch</label>
+          <select id="f-branch" required>
             <option value="" disabled selected>Select</option>
             <option>Computer Science</option>
             <option>Information Technology</option>
@@ -58,12 +48,32 @@
           </select>
         </div>
         <div class="field">
+          <label for="f-year">Year</label>
+          <select id="f-year" required>
+            <option value="" disabled selected>Select</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-semester">Semester</label>
+          <select id="f-semester" required>
+            <option value="" disabled selected>Select</option>
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+          </select>
+        </div>
+        <div class="field">
           <label for="f-cgpa">CGPA (out of 10)</label>
           <input type="number" id="f-cgpa" min="0" max="10" step="0.01" required placeholder="8.5">
         </div>
         <div class="field">
-          <label for="f-income">Parents' Annual Income (₹)</label>
-          <input type="number" id="f-income" min="0" required placeholder="150000">
+          <label for="f-state">State</label>
+          <input type="text" id="f-state" required placeholder="e.g. Telangana">
         </div>
         <div class="field">
           <label for="f-category">Category</label>
@@ -77,9 +87,41 @@
             <option>Other</option>
           </select>
         </div>
+        <div class="field">
+          <label for="f-gender">Gender</label>
+          <select id="f-gender" required>
+            <option value="" disabled selected>Select</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-income">Family Income (₹/yr)</label>
+          <input type="number" id="f-income" min="0" required placeholder="150000">
+        </div>
+        <div class="field">
+          <label for="f-domain">Interested Domain</label>
+          <select id="f-domain" required>
+            <option value="" disabled selected>Select</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Machine Learning</option>
+            <option>Cybersecurity</option>
+            <option>Cloud Computing</option>
+            <option>Core Engineering</option>
+            <option>Mobile App Development</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-goal">Career Goal</label>
+          <input type="text" id="f-goal" placeholder="e.g. Software Development Engineer">
+        </div>
       </div>
       <button type="submit" class="submit-btn">Enter the Court →</button>
-      <p class="error-msg" id="error-msg">Please fill in every field before proceeding.</p>
+      <p class="error-msg" id="error-msg">Please fill in every required field before proceeding.</p>
     </form>
   </div>
 </div>
@@ -96,6 +138,7 @@
         <li><button data-section="dashboard" class="active"><span class="icon">🏠</span>Dashboard</button></li>
         <li><button data-section="scholarships"><span class="icon">🎓</span>Scholarships</button></li>
         <li><button data-section="learning"><span class="icon">📚</span>Learning</button></li>
+        <li><button data-section="attendance"><span class="icon">📅</span>Attendance</button></li>
         <li><button data-section="pdf"><span class="icon">📄</span>PDF Summary</button></li>
         <li><button data-section="videos"><span class="icon">📺</span>Video Suggestions</button></li>
         <li><button data-section="coding"><span class="icon">💻</span>Coding Profiles</button></li>
@@ -122,7 +165,6 @@
     </main>
   </div>
 </div>
-
 
 <script src="script.js"></script>
 </body>
