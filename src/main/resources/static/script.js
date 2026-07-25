@@ -1,4 +1,4 @@
-let student = null;
+  let student = null;
   const scholarshipPool = [
     { name:"National Scholarship Portal (NSP) Merit-cum-Means", amount:"₹12,000/yr", for:["General","OBC","SC","ST","EWS","Other"], maxIncome: 250000 },
     { name:"AICTE Pragati Scholarship (For Girls)", amount:"₹50,000/yr", for:["General","OBC","SC","ST","EWS","Other"], maxIncome: 800000, genderOnly:"Female" },
